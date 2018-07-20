@@ -72,10 +72,10 @@ var scales = {};
 var timeStarted = false;
 
 function DEMORESET(id){
-	scales["Ganache Mixer"] = 530;
-	scales["Truffle Mixer"] = 320;
-	scales["Small Truffles"] = 440;
-	scales["Large Truffles"] = 370;
+	scales["C00001"] = 530;
+	scales["C00002"] = 320;
+	scales["C00005"] = 440;
+	scales["C00007"] = 370;
 	if(!timeStarted) startTime();
 	return new OfficeExtension.Promise(function(resolve) {
 		setTimeout(function() {
@@ -87,28 +87,28 @@ function DEMORESET(id){
 function startTime(){
 	timeStarted = true;
 	
-	if(scales["Small Truffles"] < 20 || (scales["Large Truffles"] < 20 || scales["Ganache Mixer"] < 20)){
+	if(scales["C00005"] < 20 || (scales["C00007"] < 20 || scales["C00001"] < 20)){
 		var myRand = Math.random();
-		scales["Ganache Mixer"] += myRand * 18;
-		scales["Small Truffles"] += myRand * 18;
-		scales["Large Truffles"] += myRand * 18;
+		scales["C00001"] += myRand * 18;
+		scales["C00005"] += myRand * 18;
+		scales["C00007"] += myRand * 18;
 	}
 	else{
 		var myRand = Math.random();
-		scales["Ganache Mixer"] += (myRand - 0.7) * 38;
-		scales["Small Truffles"] += (myRand - 0.7) * 38;
-		scales["Large Truffles"] += (myRand - 0.7) * 38;
+		scales["C00001"] += (myRand - 0.7) * 38;
+		scales["C00005"] += (myRand - 0.7) * 38;
+		scales["C00007"] += (myRand - 0.7) * 38;
 	}
-	scales["Truffle Mixer"] += (Math.random() - 0.5) * 5;
+	scales["C00002"] += (Math.random() - 0.5) * 5;
 	setTimeout(startTime, 500);
 }
 
 function getWeightFromServer(scaleID, callback){
 	var staticScales = {};
-	staticScales["Ganache Mixer"] = 530;
-	staticScales["Truffle Mixer"] = 320;
-	staticScales["Small Truffles"] = 440;
-	staticScales["Large Truffles"] = 370;
+	staticScales["C00001"] = 530;
+	staticScales["C00002"] = 320;
+	staticScales["C00005"] = 440;
+	staticScales["C00007"] = 370;
 	setTimeout(function(){
 		var data = {};
 		data.weight = staticScales[scaleID].toFixed(1);

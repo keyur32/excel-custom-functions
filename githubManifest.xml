@@ -14,7 +14,7 @@
 		<Host Name="Workbook" />
 	</Hosts>
 	<DefaultSettings>
-		<SourceLocation DefaultValue="https://keyurp.azurewebsites.net/chocolate/customfunctions.html"/>
+		<SourceLocation DefaultValue="https://keyur32.github.io/excel-custom-functions/index.html"/>
 	</DefaultSettings>
 	<Permissions>ReadWriteDocument</Permissions>
 	<VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -38,9 +38,9 @@
 		</Hosts>
 		<Resources>
 			<bt:Urls>
-				<bt:Url id="JSON-URL" DefaultValue="https://keyurp.azurewebsites.net/chocolate/customfunctions.json" />
-				<bt:Url id="JS-URL" DefaultValue="https://keyurp.azurewebsites.net/chocolate/customfunctions.js" />
-				<bt:Url id="HTML-URL" DefaultValue="https://keyurp.azurewebsites.net/chocolate/customfunctions.html" />
+				<bt:Url id="JSON-URL" DefaultValue="https://keyur32.github.io/excel-custom-functions/customfunctions.json" />
+				<bt:Url id="JS-URL" DefaultValue="https://keyur32.github.io/excel-custom-functions/customfunctions.js" />
+				<bt:Url id="HTML-URL" DefaultValue="https://keyur32.github.io/excel-custom-functions/index.html" />
 			</bt:Urls>
 			<bt:ShortStrings>
 				<bt:String id="namespace" DefaultValue="CONTOSO" />
