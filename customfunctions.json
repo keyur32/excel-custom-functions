@@ -1,0 +1,244 @@
+﻿{
+	"functions": [
+		{
+			"name": "ADD42", 
+			"description":  "adds 42 to the input numbers",
+			"helpUrl": "http://dev.office.com",
+			"result": {
+				"type": "number",
+				"dimensionality": "scalar"
+			},
+			"parameters": [
+				{
+					"name": "number 1",
+					"description": "first number to add",
+					"type": "number",
+					"dimensionality": "scalar"
+				},
+				{
+					"name": "number 2",
+					"description": "second number to add",
+					"type": "number",
+					"dimensionality": "scalar"
+				}
+			],
+			"options": {
+				"sync": true
+			}
+		},
+		{
+			"name": "ADD42ASYNC", 
+			"description":  "asynchronously wait 1 second, then add 42",
+			"helpUrl": "http://dev.office.com",
+			"result": {
+				"type": "number",
+				"dimensionality": "scalar"
+			},
+			"parameters": [
+				{
+					"name": "number 1",
+					"description": "first number to add",
+					"type": "number",
+					"dimensionality": "scalar"
+				},
+				{
+					"name": "number 2",
+					"description": "second number to add",
+					"type": "number",
+					"dimensionality": "scalar"
+				}
+			],
+			"options": {
+				"sync": false
+			}
+		},
+		{
+			"name": "ISPRIME", 
+			"description":  "determines whether a number is prime",
+			"helpUrl": "http://dev.office.com",
+			"result": {
+				"type": "boolean",
+				"dimensionality": "scalar"
+			},
+			"parameters": [
+				{
+					"name": "number",
+					"description": "the number to be evaluated",
+					"type": "number",
+					"dimensionality": "scalar"
+				}
+			],
+			"options": {
+				"sync": true
+			}
+		},
+		{
+			"name": "NTHPRIME", 
+			"description":  "determines the Nth prime number",
+			"helpUrl": "http://dev.office.com",
+			"result": {
+				"type": "number",
+				"dimensionality": "scalar"
+			},
+			"parameters": [
+				{
+					"name": "n",
+					"description": "the index of the prime to find",
+					"type": "number",
+					"dimensionality": "scalar"
+				}
+			],
+			"options": {
+				"sync": true
+			}
+		},
+		{
+			"name": "GETDAY",
+			"description": "gets the current day of the week",
+			"helpUrl": "http://dev.office.com",
+			"result": {
+				"type": "string"
+			},
+			"parameters": [],
+			"options": {
+				"sync": true
+			}
+		},
+		{
+			"name": "HELLO",
+			"description": "gets the current day of the week",
+			"helpUrl": "http://dev.office.com",
+			"result": {
+				"type": "string"
+			},
+			"parameters": [],
+			"options": {
+				"sync": true
+			}
+		},
+		{
+			"name": "LISTNUMBERS",
+			"description": "gets the current day of the week",
+			"helpUrl": "http://dev.office.com",
+			"result": {
+				"type": "number",
+				"dimensionality": "matrix"
+			},
+			"parameters": [
+				{
+					"name": "number",
+					"description": "the number to count to",
+					"type": "number",
+					"dimensionality": "scalar"
+				}
+			],
+			"options": {
+				"sync": true
+			}
+		},
+		{
+			"name": "INCREMENTVALUE", 
+			"description":  "streams numbers, counting up from zero",
+			"helpUrl": "http://dev.office.com",
+			"result": {
+				"type": "number",
+				"dimensionality": "scalar"
+			},
+			"parameters": [
+				{
+					"name": "increment",
+					"description": "the number to be added each time",
+					"type": "number",
+					"dimensionality": "scalar"
+				}
+			],
+			"options": {
+				"sync": false,
+				"stream": true,
+				"cancelable": true
+			}
+		},
+		{
+			"name": "SECONDHIGHEST", 
+			"description":  "gets the second highest number from a range",
+			"helpUrl": "http://dev.office.com",
+			"result": {
+				"type": "number",
+				"dimensionality": "scalar"
+			},
+			"parameters": [
+				{
+					"name": "range",
+					"description": "the input range",
+					"type": "number",
+					"dimensionality": "matrix"
+				}
+			],
+			"options": {
+				"sync": true
+			}
+		},
+		{
+			"name": "GETWEIGHT", 
+			"description":  "Returns the weight of a scale",
+			"helpUrl": "http://dev.office.com",
+			"result": {
+				"type": "number",
+				"dimensionality": "scalar"
+			},
+			"parameters": [
+				{
+					"name": "scale ID",
+                	"description": "The ID to be measured",
+					"type": "string",
+					"dimensionality": "scalar"
+				}
+			],
+			"options": {
+				"sync": false
+			}
+		},
+		{
+			"name": "STREAMWEIGHT", 
+			"description":  "Returns the weight of the materials in the machine every 500 ms.",
+			"helpUrl": "http://dev.office.com",
+			"result": {
+				"type": "number",
+				"dimensionality": "scalar"
+			},
+			"parameters": [
+				{
+					"name":  "Scale ID",
+                	"description": "The machine to be measured",
+					"type": "string",
+					"dimensionality": "scalar"
+				}
+			],
+			"options": {
+				"sync": false,
+				"stream": true,
+				"cancelable": true
+			}
+		},
+		{
+			"name": "DEMORESET", 
+			"description":  "Resets the demo",
+			"helpUrl": "http://dev.office.com",
+			"result": {
+				"type": "number",
+				"dimensionality": "scalar"
+			},
+			"parameters": [
+				{
+					"name":  "ID",
+                	"description": "How to reset",
+					"type": "number",
+					"dimensionality": "scalar"
+				}
+			],
+			"options": {
+				"sync": false
+			}
+		}
+	]
+}
