@@ -95,12 +95,12 @@ function startTime(){
 	}
 	else{
 		var myRand = Math.random();
-		scales["C00001"] += (myRand - 0.7) * 38;
-		scales["C00005"] += (myRand - 0.7) * 38;
-		scales["C00007"] += (myRand - 0.7) * 38;
+		scales["C00001"] += Math.ceil((myRand + 0.7) * 38);
+		scales["C00005"] += Math.ceil((myRand + 0.7) * 38);
+		scales["C00007"] += Math.ceil((myRand + 0.7) * 38);
 	}
-	scales["C00002"] += (Math.random() - 0.5) * 5;
-	setTimeout(startTime, 500);
+	scales["C00002"] += Math.ceil((Math.random()) * 5);
+	setTimeout(startTime, 2000);
 }
 
 function getWeightFromServer(scaleID, callback){
@@ -111,9 +111,14 @@ function getWeightFromServer(scaleID, callback){
 	staticScales["C00007"] = 370;
 	setTimeout(function(){
 		var data = {};
-		data.weight = staticScales[scaleID].toFixed(1);
+		
+		if(staticScales[scaleID])
+			data.weight = Math.Ceil(Math.random()*100000);
+		else
+			data.weight = Math.Ceil(staticScales[scaleID].toFixed(1));
+
 		callback(data);
-	}, 200);
+	}, 2000);
 }
 
 // chocolate factory
@@ -130,11 +135,13 @@ function GETWEIGHT(scaleID){
 
 function STREAMWEIGHT(scaleID, caller){
 	if(!timeStarted) DEMORESET();
+
 	function getNextWeight(){ 
 		caller.setResult(scales[scaleID]); 
-		setTimeout(getNextWeight, 500); 
+		setTimeout(getNextWeight, 2000); 
 	} 
 	getNextWeight(); 
+
 }
 
 
