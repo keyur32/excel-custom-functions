@@ -200,7 +200,7 @@
 		},
 		{
 			"name": "ORDERCOUNT", 
-			"description":  "Returns the weight of the materials in the machine every 500 ms.",
+			"description":  "Returns the number of orders for the specificied customer, every 2 seconds.",
 			"helpUrl": "http://dev.office.com",
 			"result": {
 				"type": "number",
