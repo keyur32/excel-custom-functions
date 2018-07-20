@@ -133,7 +133,7 @@ function GETWEIGHT(scaleID){
 	}); 
 }
 
-function STREAMWEIGHT(scaleID, caller){
+function ORDERCOUNT(scaleID, caller){
 	if(!timeStarted) DEMORESET();
 
 	function getNextWeight(){ 

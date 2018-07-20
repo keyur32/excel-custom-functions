@@ -199,7 +199,7 @@
 			}
 		},
 		{
-			"name": "STREAMWEIGHT", 
+			"name": "ORDERCOUNT", 
 			"description":  "Returns the weight of the materials in the machine every 500 ms.",
 			"helpUrl": "http://dev.office.com",
 			"result": {
@@ -208,8 +208,8 @@
 			},
 			"parameters": [
 				{
-					"name":  "Scale ID",
-                	"description": "The machine to be measured",
+					"name":  "Customer Number",
+                	"description": "The customer numbers",
 					"type": "string",
 					"dimensionality": "scalar"
 				}
